@@ -1,0 +1,4 @@
+com\oy\microservice_provider_user\App.class
+com\oy\microservice_provider_user\UserController.class
+com\oy\microservice_provider_user\User.class
+com\oy\microservice_provider_user\UserRepository.class

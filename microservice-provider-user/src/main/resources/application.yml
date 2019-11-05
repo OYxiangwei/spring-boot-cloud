@@ -1,0 +1,26 @@
+server:
+  port: 8004
+ 
+spring:  application:    name: microservice-provider-user
+  jpa:    show-sql: true
+    
+  zipkin:    base-url: http://localhost:9411
+  sleuth:    sampler:      probability: 1.0
+
+logging:  level:    root: INFO        
+    org.springframework.cloud.sleuth: DEBUG
+    
+    org.hibernate: INFO
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
+    
+    
+management:
+  # endpoint:
+   # health:
+      # 是否展示健康检查详情
+    #  show-details: always
+        endpoints:    web:      exposure:        include: '*'
+          
+eureka:  client:    service-url:      defaultZone: http://localhost:8080/eureka/
+  instance:    prefer-ip-address: true    

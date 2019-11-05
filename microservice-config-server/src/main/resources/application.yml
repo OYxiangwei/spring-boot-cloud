@@ -1,0 +1,8 @@
+server:
+  port: 9999
+  
+spring:  application:    name: microservice-config-server
+    
+  cloud:    config:      server:        git:          uri: https://github.com/OyXw1/MIcroService-study-samples.git
+          username: OyXw1
+          password: yxw@19890707
