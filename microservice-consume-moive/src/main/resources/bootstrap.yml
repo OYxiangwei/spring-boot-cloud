@@ -1,7 +1,0 @@
-spring:
-  application:
-    name: microservice-consumer-movie
-    
-  cloud:    config:      uri:      - http://localhost:9999/
-      profile: dev
-      label: master
