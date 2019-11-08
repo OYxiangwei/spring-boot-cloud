@@ -1,0 +1,12 @@
+server:
+  port: 8761
+  
+eureka:  instance:    hostname: register
+    prefer-ip-address: true
+  client:    register-with-eureka: false
+    fetch-registry: false
+    service-url:      defaultZone: http://${security.user.name}:${security.user.password}@${eureka.instance.hostname}:${server.port}/eureka/
+      
+      
+security:  user:    name: user
+    password: ${REGISTER_SERVER_PASSWORD:password}
